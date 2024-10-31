@@ -80,5 +80,3 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
 4. **Check for Updates:** `git diff origin/<your_branch> <your_branch>` (replace `<your_branch>` with your branch name, e.g., `main`).
 
 5. **Merge (if needed):** `git merge origin/<your_branch>`  (Resolve conflicts if any).
-
-6. **Push (optional):** `git push origin <your_branch>`
