@@ -70,3 +70,15 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
 1. `git add my_file.txt another_file.js`
 2. `git commit -m "Added new features and fixed a bug"`
 3. `git push origin main`
+
+# Pulling Changes from GitHub
+
+1. **Open Terminal:** Navigate to your local repository directory.
+
+3. **Fetch Changes:** `git fetch origin`
+
+4. **Check for Updates:** `git diff origin/<your_branch> <your_branch>` (replace `<your_branch>` with your branch name, e.g., `main`).
+
+5. **Merge (if needed):** `git merge origin/<your_branch>`  (Resolve conflicts if any).
+
+6. **Push (optional):** `git push origin <your_branch>`
