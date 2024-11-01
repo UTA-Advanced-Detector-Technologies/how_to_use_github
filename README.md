@@ -1,4 +1,4 @@
-# Cloning a GitHub Repository
+# Cloning a GitHub Repo
 
 To clone a GitHub repository, follow these steps:
 
@@ -29,30 +29,33 @@ To clone a GitHub repository, follow these steps:
    cd repository
    ```
 
-# Pushing Changes to a Git Repository
+# Pushing Changes 
 
-These instructions assume you have Git installed on your computer and have already cloned a repository.  If not, you'll need to do that first. 
+These instructions assume you have Git installed on your computer and have already cloned a repository.  If not, you'll need to do that first.
 
 **Steps:**
+1. **Open Terminal or Command Prompt**: Navigate to the local repository directory using the `cd` command.
+   ```bash
+   cd path/to/your/repository
+   ```
 
-1. **Stage your changes:**  Use `git add` to stage the files you want to include in your commit. You can add individual files, specific directories, or all changes using the following commands:
+2. **Stage your changes:**  Use `git add` to stage the files you want to include in your commit. You can add individual files, specific directories, or all changes using the following commands:
 
    * `git add <file>`  (e.g., `git add my_file.txt`)
    * `git add <directory>` (e.g., `git add my_directory/`)
    * `git add .` (stages all changes in the current directory and subdirectories)
 
 
-2. **Commit your changes:** Use `git commit` to save your staged changes with a descriptive message.  This creates a snapshot of your work.
+3. **Commit your changes:** Use `git commit` to save your staged changes with a descriptive message.  This creates a snapshot of your work.
 
    ```bash
    git commit -m "Your descriptive commit message"
    ```
-   Replace `"Your descriptive commit message"` with a concise summary of the
-   changes you've made. Good commit messages are crucial for tracking your project's
-   history.
+   Replace `"Your descriptive commit message"` with a nice summary of the
+   changes you've made. 
 
-3. Push your changes: Use `git push` to upload your committed changes to the
-remote repository on your server (e.g., GitHub, GitLab, Bitbucket).
+4. **Push your changes:** Use `git push` to upload your committed changes to the
+remote repository
    ```bash
    git push origin <branch_name>
    ```
@@ -63,7 +66,7 @@ remote repository on your server (e.g., GitHub, GitLab, Bitbucket).
    or `master`). If you're pushing to a different branch, replace `<branch_name>`
    accordingly.
 
-Example Workflow:
+Example:
 
 Let's say you've made changes to `my_file.txt` and `another_file.js`:
 
@@ -71,12 +74,34 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
 2. `git commit -m "Added new features and fixed a bug"`
 3. `git push origin main`
 
-# Pulling Changes from GitHub
+# Pulling Changes
 
-1. **Open Terminal:** Navigate to your local repository directory.
+1. **Open Terminal or Command Prompt**: Navigate to the local repository directory using the `cd` command.
+   ```bash
+   cd path/to/your/repository
+   ```
 
-3. **Fetch Changes:** `git fetch origin`
+2. **Pull Changes:** Use this command to pull the latest changes from the remote repository.
+   ```bash
+   git pull origin your-branch-name
+   ```
+Replace your-branch-name with the name of the branch you want to pull from (like main or something else).
 
-4. **Check for Updates:** `git diff origin/<your_branch> <your_branch>` (replace `<your_branch>` with your branch name, e.g., `main`).
-
-5. **Merge (if needed):** `git merge origin/<your_branch>`  (Resolve conflicts if any).
+3. **If this throws and error:** Probably someone has pushed changes to the repo, and you have not pulled them before making local changes. In this case do these steps:
+   - Fetch the latest changes from the remote repository. This will update your local copy of the remote branches without merging:
+      ```bash
+      git fetch origin
+      ```
+   - Merge the changes into your current branch. If you are on the branch where you want to merge the changes, use:
+      ```bash
+      git merge origin/main
+      ```
+        Replace main with the name of the branch you are merging from if it’s different. If there are any merge conflicts, Git will notify you here. You'll need to resolve those conflicts in your files and then stage the resolved files.
+   - Commit the merge if it happens automatically or if you had to resolve conflicts:
+      ```bash
+      git commit -m "Merge updates from remote branch"
+      ```
+   - Push your changes to the remote repo:
+     ```bash
+     git push origin main
+     ```
