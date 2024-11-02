@@ -14,15 +14,17 @@ Make sure to do this after installing Git (see next section)
       'Generating public/private ed25519 key pair.
       Enter file in which to save the key (/Users/olivias-local/.ssh/id_ed25519):'
    Enter the file to save the key to, just copy what it gives you in the parenthesis. Then just press enter twice when it asks for a passphrase.
-3. **Copy Key**
+3. **Copy Key:**
    Now you can find the key by typing this in the command line:
    ```bash
    cat ~/.ssh/id_ed25519.pub
    ```
    This will print something like:
+
       'ssh-ed25519 SOMERANDOMCHARACTERSTRINGblahblahblahblah your_email@someplace'
+
    Copy that
-5. **Add key to GitHub**
+5. **Add key to GitHub:**
    Now add this key to your GitHub account by going to **Settings → SSH and GPG keys → New SSH key** and paste what you just copied
    
 
@@ -57,7 +59,7 @@ To clone a GitHub repository, follow these steps:
    cd how_to_use_github
    ```
 # Branches
-1. **List Available Branche:s**
+1. **List Available Branches:**
    To view all branches in the repository, use the following command:
    ```bash
    git branch -a
@@ -148,7 +150,7 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
    ```bash
    git pull origin your-branch-name
    ```
-Replace your-branch-name with the name of the branch you want to pull from (like main or something else).
+   Replace your-branch-name with the name of the branch you want to pull from.
 
 3. **If this throws and error:** Probably someone has pushed changes to the repo, and you have not pulled them before making local changes. In this case do these steps:
    - Fetch the latest changes from the remote repository. This will update your local copy of the remote branches without merging:
