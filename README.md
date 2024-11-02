@@ -1,4 +1,31 @@
-# Cloning a GitHub Repo
+# Adding an SSH key to your account
+Make sure to do this after installing Git (see next section)
+2. **Open Terminal or Command Prompt:**
+   - On macOS and Linux, open Terminal.
+   - On Windows, open Command Prompt or Git Bash.
+
+2. **Generate SSH key pair:**
+   Tyoe the following command in your terminal after inserting your email into the command:
+   ```bash
+   ssh-keygen -t ed25519 -C "your_email@someplace"
+   ```
+   This will give you a prompt like:
+      'Generating public/private ed25519 key pair.
+      Enter file in which to save the key (/Users/olivias-local/.ssh/id_ed25519):'
+   Enter the file to save the key to, just copy what it gives you in the parenthesis. Then just press enter twice when it asks for a passphrase.
+3. **Copy Key**
+   Now you can find the key by typing this in the command line:
+   ```bash
+   cat ~/.ssh/id_ed25519.pub
+   ```
+   This will print something like:
+      'ssh-ed25519 SOMERANDOMCHARACTERSTRINGblahblahblahblah your_email@someplace'
+   Copy that
+5. **Add key to GitHub**
+   Now add this key to your GitHub account by going to **Settings → SSH and GPG keys → New SSH key** and paste what you just copied
+   
+
+# Cloning a GitHub Repo Using SSH
 
 To clone a GitHub repository, follow these steps:
 
@@ -15,18 +42,18 @@ To clone a GitHub repository, follow these steps:
    cd path/to/your/directory
    ```
 4. **Find the Repository URL:**
-   Go to the GitHub page of the repository you want to clone. Click on the "Code" button and copy the URL provided. It should look something like:
-   `https://github.com/username/repository.git`
+   Go to the GitHub page of the repository you want to clone. Click on the "Code" button and go to the "SSH" tab. Copy the URL provided there. It should look something like:
+      `git@github.com:CosmiQuantum/how_to_use_github.git`
 5. **Clone the Repository:**
    Use the `git clone` command followed by the repository URL. For example:
    ```bash
-     git clone https://github.com/username/repository.git
+   git clone git@github.com:CosmiQuantum/how_to_use_github.git
    ```
 
 7. **Verify the Clone:**
    After the clone process completes, navigate into the cloned repository folder:
    ```bash
-   cd repository
+   cd how_to_use_github
    ```
 
 # Pushing Changes 
@@ -105,3 +132,5 @@ Replace your-branch-name with the name of the branch you want to pull from (like
      ```bash
      git push origin main
      ```
+
+#
