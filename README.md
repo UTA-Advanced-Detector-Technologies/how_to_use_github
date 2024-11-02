@@ -1,6 +1,7 @@
 # Adding an SSH key to your account
 Make sure to do this after installing Git (see next section)
-2. **Open Terminal or Command Prompt:**
+
+1. **Open Terminal or Command Prompt:**
    - On macOS and Linux, open Terminal.
    - On Windows, open Command Prompt or Git Bash.
 
