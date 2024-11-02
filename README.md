@@ -55,6 +55,42 @@ To clone a GitHub repository, follow these steps:
    ```bash
    cd how_to_use_github
    ```
+# Branches
+1. **List Available Branche:s**
+   To view all branches in the repository, use the following command:
+   ```bash
+   git branch -a
+   ```
+2. **Create a New Branch:**
+   To create a new branch (and switch to it), use:
+   ```bash
+   git checkout -b new-branch-name
+   ```
+
+# Switching Between Branches Safely
+
+To switch between branches in Git without affecting the branch you're currently working on, follow these steps:
+
+1. **Commit or Stash Changes:**
+   Make sure you have no uncommitted changes on your current branch. You can either commit your changes using:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+2. **Switch Branch:**
+   Switch branches by using one of the two following commands:
+   ```bash
+   git switch branch-name
+   ```
+   or:
+   ```bash
+   git checkout branch-name
+   ```
+3. **Verify Branch:**
+   Make sure you are indeed on the right branch by doing:
+   ```bash
+   git branch
+   ```
 
 # Pushing Changes 
 
@@ -89,8 +125,7 @@ remote repository
    `origin` is typically the name of the remote repository. You can check the
    remote names using `git remote -v`.
    
-   `<branch_name>` is the name of the branch you're working on (usually `main`
-   or `master`). If you're pushing to a different branch, replace `<branch_name>`
+   `<branch_name>` is the name of the branch you're working on. If you're pushing to a different branch, replace `<branch_name>`
    accordingly.
 
 Example:
@@ -99,7 +134,7 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
 
 1. `git add my_file.txt another_file.js`
 2. `git commit -m "Added new features and fixed a bug"`
-3. `git push origin main`
+3. `git push origin <branchname>`
 
 # Pulling Changes
 
@@ -121,16 +156,15 @@ Replace your-branch-name with the name of the branch you want to pull from (like
       ```
    - Merge the changes into your current branch. If you are on the branch where you want to merge the changes, use:
       ```bash
-      git merge origin/main
+      git merge origin/<branchname>
       ```
-        Replace main with the name of the branch you are merging from if it’s different. If there are any merge conflicts, Git will notify you here. You'll need to resolve those conflicts in your files and then stage the resolved files.
+        Replace <branchname> with the name of the branch you are merging from. If there are any merge conflicts, Git will notify you here. You'll need to resolve those conflicts in your files and then stage the resolved files.
    - Commit the merge if it happens automatically or if you had to resolve conflicts:
       ```bash
       git commit -m "Merge updates from remote branch"
       ```
    - Push your changes to the remote repo:
      ```bash
-     git push origin main
+     git push origin <branchname>
      ```
 
-#
