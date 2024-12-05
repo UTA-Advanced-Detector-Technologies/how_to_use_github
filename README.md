@@ -170,4 +170,31 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
      ```bash
      git push origin <branchname>
      ```
+# How to add a default Github User
 
+To remove the currently configured GitHub user in the command line and add a new one, use the following instructions. 
+
+1. **Check Current Git Configuration:** Look at the current Git user settings using:
+   ```bash
+   git config --global user.name
+   git config --global user.email
+   ```
+
+2. **Unset or Update Git User Information:** unset whatever settings are there now using:
+   ```bash
+   git config --global --unset user.name
+   git config --global --unset user.email
+   ```
+
+3. **Set New User Information:** Set your username now by doing:
+   ```bash
+   git config --global user.name "New Username"
+   git config --global user.email "newemail@example.com"
+   ```
+   *Replace `"New Username"` and `"newemail@example.com"` with your GitHub username and email.*
+
+4. **Verify the Changes:** Ensure that your Git configuration and remote URLs are updated correctly.
+   ```bash
+   git config --global user.name
+   git config --global user.email
+   ```
