@@ -171,7 +171,7 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
      git push origin <branchname>
      ```
 # How to add a default Github User
-
+  
 To remove the currently configured GitHub user in the command line and add a new one, use the following instructions. 
 
 1. **Check Current Git Configuration:** Look at the current Git user settings using:
