@@ -275,7 +275,7 @@ git branch                      # make sure you are on the correct branch
    * A brief **description** explaining what you’ve done and why.
 7. Click **Create pull request** again to finalize.
 8. Once reviewers approve, click **Merge pull request**, choose your merge method (e.g. “Squash and merge”), and confirm.
-9. After merging, you can safely delete your feature branch by clicking **Delete branch** on the PR page.
+9. After merging, you can safely delete your feature branch by clicking **Delete branch** on the "Branches" page.
 
 
 
