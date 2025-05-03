@@ -1,3 +1,14 @@
+## Table of Contents
+
+- [Adding an SSH key to your account](#adding-an-ssh-key-to-your-account)
+- [Cloning a GitHub Repo Using SSH](#cloning-a-github-repo-using-ssh)
+- [Branches](#branches)
+- [Switching Between Branches Safely](#switching-between-branches-safely)
+- [Pushing Changes](#pushing-changes)
+- [Pulling Changes](#pulling-changes)
+- [How to add a default Github User](#how-to-add-a-default-github-user)
+- [Pipeline for new contributions](#pipeline-for-new-contributions)
+
 # Adding an SSH key to your account
 Make sure to do this after installing Git (see next section)
 
@@ -198,3 +209,26 @@ To remove the currently configured GitHub user in the command line and add a new
    git config --global user.name
    git config --global user.email
    ```
+
+# Pipeline for new contributions
+
+1. Go to the `Issues` tab at the top of the GitHub Repo (next to the tab  '<> Code').
+2. Click on the green button that says 'New issue' on the right of the page.
+3. Add a title for the issue describing generally the types of changes you want to make, such as "Add charge parity QICK experiment". You can put a description if you want, but this is optional.
+4. Press the green button that says `create` on the bottom right corner of the page.
+5. Now, you should see your issue, with a number next to it and a green bubble that says `Open` under the issue title. 
+6. Now go to the stuff on the far right of this page, and find the blue link that says `Create a branch` under the header `Development`. Click the link.
+7. A window should have popped up. Give your branch a name with your initials, hyphen, a descriptive title using camelCase with a lowercase first letter, hyphen, and then the branch number (which will automatically show up in the auto generated name). For example: `os-pipelineTest-2`.
+8. For the tab under `Branch source`, select the branch called 'development' if you are being well-behaved.
+9. Make sure you are in the correct Repository:)
+10. Press the green button at the bottom that says `Create branch`
+11. Now you have a remote branch. But, you might want to also get it locally on your computer, so you can edit things easily. To do this, you can run the commands:
+    ```bash
+    cd repo-name
+    git branch -r                   #to look at the branches that are remote
+    git fetch origin 
+    git checkout os-pipelineTest-2  #switch to the branch you made
+    git branch                      #make sure you are on the correct branch
+    ```
+12. Now make all of your changes on this branch, commit and push the changes to the branch.
+13. When you’re ready, open a pull request to merge your feature branch back into the base branch.
