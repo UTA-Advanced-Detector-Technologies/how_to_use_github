@@ -8,6 +8,11 @@
 - [Pulling Changes](#pulling-changes)
 - [How to add a default Github User](#how-to-add-a-default-github-user)
 - [Pipeline for new contributions](#pipeline-for-new-contributions)
+   - [1. Open an Issue](#1-open-an-issue)
+   - [2. Create a Branch](#2-create-a-branch)
+   - [3. Check Out Locally](#3-check-out-locally)
+   - [4. Develop & Sync](#4-develop--sync)
+   - [5. Open a Pull Request](#5-open-a-pull-request)
 
 ---
 # Adding an SSH key to your account
@@ -248,7 +253,6 @@ git branch                      # make sure you are on the correct branch
 ```
 
 ## 4. Develop & Sync
-
 1. Make all of your changes on this branch, then commit and push them.
 2. If the base branch has updates from other users while you are editing, you can run:
 
@@ -263,22 +267,15 @@ git branch                      # make sure you are on the correct branch
    ```
 
 ## 5. Open a Pull Request
-
 1. Go to your repository on GitHub and click the **Pull requests** tab (right next to **Issues**).
 2. Click **New pull request**.
 3. Set the **base:** dropdown to the branch you originally branched off (e.g. `development`), and the **compare:** dropdown to your feature branch (e.g. `os-pipelineTest-2`).
 4. Scroll down to make sure your changes look correct.
 5. Click **Create pull request**.
 6. Fill in:
-
    * A concise **title** (e.g. “Add pipeline issue template”).
    * A brief **description** explaining what you’ve done and why.
 7. Click **Create pull request** again to finalize.
 8. Once reviewers approve, click **Merge pull request**, choose your merge method (e.g. “Squash and merge”), and confirm.
 9. After merging, you can safely delete your feature branch by clicking **Delete branch** on the "Branches" page.
-
-
-
-
-
 
