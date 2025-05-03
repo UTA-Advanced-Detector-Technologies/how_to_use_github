@@ -12,7 +12,6 @@
 ---
 # Adding an SSH key to your account
 
----
 Make sure to do this after installing Git (see next section)
 
 1. **Open Terminal or Command Prompt:**
@@ -41,10 +40,8 @@ Make sure to do this after installing Git (see next section)
 5. **Add key to GitHub:**
    Now add this key to your GitHub account by going to **Settings → SSH and GPG keys → New SSH key** and paste what you just copied
    
-
-# Cloning a GitHub Repo Using SSH
-
 ---
+# Cloning a GitHub Repo Using SSH
 
 To clone a GitHub repository, follow these steps:
 
@@ -74,6 +71,7 @@ To clone a GitHub repository, follow these steps:
    ```bash
    cd how_to_use_github
    ```
+---
 # Branches
 1. **List Available Branches:**
    To view all branches in the repository, use the following command:
@@ -85,10 +83,8 @@ To clone a GitHub repository, follow these steps:
    ```bash
    git checkout -b new-branch-name
    ```
-
-# Switching Between Branches Safely
-
 ---
+# Switching Between Branches Safely
 
 To switch between branches in Git without affecting the branch you're currently working on, follow these steps:
 
@@ -112,10 +108,8 @@ To switch between branches in Git without affecting the branch you're currently 
    ```bash
    git branch
    ```
-
-# Pushing Changes 
-
 ---
+# Pushing Changes 
 
 These instructions assume you have Git installed on your computer and have already cloned a repository.  If not, you'll need to do that first.
 
@@ -159,9 +153,8 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
 2. `git commit -m "Added new features and fixed a bug"`
 3. `git push origin <branchname>`
 
-# Pulling Changes
-
 ---
+# Pulling Changes
 
 1. **Open Terminal or Command Prompt**: Navigate to the local repository directory using the `cd` command.
    ```bash
@@ -192,9 +185,8 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
      ```bash
      git push origin <branchname>
      ```
-# How to add a default Github User
-
 ---
+# How to add a default Github User
 
 To remove the currently configured GitHub user in the command line and add a new one, use the following instructions. 
 
@@ -223,10 +215,8 @@ To remove the currently configured GitHub user in the command line and add a new
    git config --global user.email
    ```
 
-
-# Pipeline for New Contributions
-
 ---
+# Pipeline for New Contributions
 
 ## 1. Open an Issue
 1. Go to the `Issues` tab at the top of the GitHub Repo (next to the `<> Code` tab).  
@@ -234,8 +224,6 @@ To remove the currently configured GitHub user in the command line and add a new
 3. Add a title for the issue describing generally the types of changes you want to make, such as _“Add charge parity QICK experiment”_. You can put a description if you want, but this is optional.  
 4. Press the green **Create** button on the bottom right corner of the page.  
 5. You should now see your issue, with a number next to it and a green bubble that says **Open** under the issue title.  
-
----
 
 ## 2. Create a Branch
 1. On the far right of the issue page, find the blue **Create a branch** link under the **Development** header. Click it.  
@@ -248,7 +236,6 @@ To remove the currently configured GitHub user in the command line and add a new
    - Make sure you are in the correct Repository :)  
    - Press the green **Create branch** button.  
 
----
 
 ## 3. Check Out Locally
 If you’d like to work on that branch on your computer, run:
@@ -259,7 +246,6 @@ git fetch origin
 git checkout os-pipelineTest-2  # switch to the branch you made
 git branch                      # make sure you are on the correct branch
 ```
----
 
 ## 4. Develop & Sync
 
@@ -275,8 +261,6 @@ git branch                      # make sure you are on the correct branch
    ```bash
    git pull origin development
    ```
-
----
 
 ## 5. Open a Pull Request
 
