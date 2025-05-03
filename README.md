@@ -1,4 +1,4 @@
-## Table of Contents
+# Table of Contents
 
 - [Adding an SSH key to your account](#adding-an-ssh-key-to-your-account)
 - [Cloning a GitHub Repo Using SSH](#cloning-a-github-repo-using-ssh)
@@ -9,7 +9,10 @@
 - [How to add a default Github User](#how-to-add-a-default-github-user)
 - [Pipeline for new contributions](#pipeline-for-new-contributions)
 
+---
 # Adding an SSH key to your account
+
+---
 Make sure to do this after installing Git (see next section)
 
 1. **Open Terminal or Command Prompt:**
@@ -40,6 +43,8 @@ Make sure to do this after installing Git (see next section)
    
 
 # Cloning a GitHub Repo Using SSH
+
+---
 
 To clone a GitHub repository, follow these steps:
 
@@ -83,6 +88,8 @@ To clone a GitHub repository, follow these steps:
 
 # Switching Between Branches Safely
 
+---
+
 To switch between branches in Git without affecting the branch you're currently working on, follow these steps:
 
 1. **Commit or Stash Changes:**
@@ -107,6 +114,8 @@ To switch between branches in Git without affecting the branch you're currently 
    ```
 
 # Pushing Changes 
+
+---
 
 These instructions assume you have Git installed on your computer and have already cloned a repository.  If not, you'll need to do that first.
 
@@ -152,6 +161,8 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
 
 # Pulling Changes
 
+---
+
 1. **Open Terminal or Command Prompt**: Navigate to the local repository directory using the `cd` command.
    ```bash
    cd path/to/your/repository
@@ -182,7 +193,9 @@ Let's say you've made changes to `my_file.txt` and `another_file.js`:
      git push origin <branchname>
      ```
 # How to add a default Github User
-  
+
+---
+
 To remove the currently configured GitHub user in the command line and add a new one, use the following instructions. 
 
 1. **Check Current Git Configuration:** Look at the current Git user settings using:
@@ -210,25 +223,78 @@ To remove the currently configured GitHub user in the command line and add a new
    git config --global user.email
    ```
 
-# Pipeline for new contributions
 
-1. Go to the `Issues` tab at the top of the GitHub Repo (next to the tab  '<> Code').
-2. Click on the green button that says 'New issue' on the right of the page.
-3. Add a title for the issue describing generally the types of changes you want to make, such as "Add charge parity QICK experiment". You can put a description if you want, but this is optional.
-4. Press the green button that says `create` on the bottom right corner of the page.
-5. Now, you should see your issue, with a number next to it and a green bubble that says `Open` under the issue title. 
-6. Now go to the stuff on the far right of this page, and find the blue link that says `Create a branch` under the header `Development`. Click the link.
-7. A window should have popped up. Give your branch a name with your initials, hyphen, a descriptive title using camelCase with a lowercase first letter, hyphen, and then the branch number (which will automatically show up in the auto generated name). For example: `os-pipelineTest-2`.
-8. For the tab under `Branch source`, select the branch called 'development' if you are being well-behaved.
-9. Make sure you are in the correct Repository:)
-10. Press the green button at the bottom that says `Create branch`
-11. Now you have a remote branch. But, you might want to also get it locally on your computer, so you can edit things easily. To do this, you can run the commands:
-    ```bash
-    cd repo-name
-    git branch -r                   #to look at the branches that are remote
-    git fetch origin 
-    git checkout os-pipelineTest-2  #switch to the branch you made
-    git branch                      #make sure you are on the correct branch
-    ```
-12. Now make all of your changes on this branch, commit and push the changes to the branch.
-13. When you’re ready, open a pull request to merge your feature branch back into the base branch.
+# Pipeline for New Contributions
+
+---
+
+## 1. Open an Issue
+1. Go to the `Issues` tab at the top of the GitHub Repo (next to the `<> Code` tab).  
+2. Click on the green **New issue** button on the right of the page.  
+3. Add a title for the issue describing generally the types of changes you want to make, such as _“Add charge parity QICK experiment”_. You can put a description if you want, but this is optional.  
+4. Press the green **Create** button on the bottom right corner of the page.  
+5. You should now see your issue, with a number next to it and a green bubble that says **Open** under the issue title.  
+
+---
+
+## 2. Create a Branch
+1. On the far right of the issue page, find the blue **Create a branch** link under the **Development** header. Click it.  
+2. In the popup:
+   - Give your branch a name with your initials, hyphen, a descriptive title using camelCase with a lowercase first letter, hyphen, and then the branch number (which will automatically show up). For example:
+     ```
+     os-pipelineTest-2
+     ```
+   - For the **Branch source** tab, select the branch called `development` if you are being well-behaved.  
+   - Make sure you are in the correct Repository :)  
+   - Press the green **Create branch** button.  
+
+---
+
+## 3. Check Out Locally
+If you’d like to work on that branch on your computer, run:
+```bash
+cd repo-name
+git branch -r                   # to look at the branches that are remote
+git fetch origin 
+git checkout os-pipelineTest-2  # switch to the branch you made
+git branch                      # make sure you are on the correct branch
+```
+---
+
+## 4. Develop & Sync
+
+1. Make all of your changes on this branch, then commit and push them.
+2. If the base branch has updates from other users while you are editing, you can run:
+
+   ```bash
+   git merge origin/development
+   ```
+
+   or
+
+   ```bash
+   git pull origin development
+   ```
+
+---
+
+## 5. Open a Pull Request
+
+1. Go to your repository on GitHub and click the **Pull requests** tab (right next to **Issues**).
+2. Click **New pull request**.
+3. Set the **base:** dropdown to the branch you originally branched off (e.g. `development`), and the **compare:** dropdown to your feature branch (e.g. `os-pipelineTest-2`).
+4. Scroll down to make sure your changes look correct.
+5. Click **Create pull request**.
+6. Fill in:
+
+   * A concise **title** (e.g. “Add pipeline issue template”).
+   * A brief **description** explaining what you’ve done and why.
+7. Click **Create pull request** again to finalize.
+8. Once reviewers approve, click **Merge pull request**, choose your merge method (e.g. “Squash and merge”), and confirm.
+9. After merging, you can safely delete your feature branch by clicking **Delete branch** on the PR page.
+
+
+
+
+
+
