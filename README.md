@@ -13,7 +13,8 @@
    - [3. Check Out Locally](#3-check-out-locally)
    - [4. Develop & Sync](#4-develop--sync)
    - [5. Open a Pull Request](#5-open-a-pull-request)
-- [Branching Strategy for Library Development](branching-strategy-for-library-development)
+- [Branching Strategy for Library Development](#branching-strategy-for-library-development)
+
 
 ---
 # Adding an SSH key to your account
