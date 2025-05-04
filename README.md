@@ -299,4 +299,3 @@ git branch                      # make sure you are on the correct branch
   - One branch per released version (for example, `release/v1.2.0`).  
   - Created from `main` at release time.  
   - Frozen after creation—only critical fixes go here.
-
