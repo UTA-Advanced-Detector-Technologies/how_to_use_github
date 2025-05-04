@@ -13,6 +13,7 @@
    - [3. Check Out Locally](#3-check-out-locally)
    - [4. Develop & Sync](#4-develop--sync)
    - [5. Open a Pull Request](#5-open-a-pull-request)
+- [Branching Strategy for Library Development](branching-strategy-for-library-development)
 
 ---
 # Adding an SSH key to your account
@@ -278,4 +279,23 @@ git branch                      # make sure you are on the correct branch
 7. Click **Create pull request** again to finalize.
 8. Once reviewers approve, click **Merge pull request**, choose your merge method (e.g. “Squash and merge”), and confirm.
 9. After merging, you can safely delete your feature branch by clicking **Delete branch** on the "Branches" page.
+   
+---
+# Branching Strategy for Library Development
 
+## Branches
+
+- **main**  
+  - Reflects the latest stable release.  
+  - No direct commits or pull requests.  
+  - New releases are merged here only after they’ve been fully tested.
+
+- **development**  
+  - Primary branch for ongoing work.  
+  - All feature/fix branches should fork from here.  
+  - All pull requests should target this branch.
+
+- **release/vX.Y.Z**  
+  - One branch per released version (for example, `release/v1.2.0`).  
+  - Created from `main` at release time.  
+  - Frozen after creation—only critical fixes go here.
